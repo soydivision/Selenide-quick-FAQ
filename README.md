@@ -26,7 +26,8 @@ element(Selectors.byXpath("//*[contains(text(),'Some button text')]")).click();
 
 ##
 ```
-element(Selectors.byXpath("//h2[contains(., 'Some visible text in an h2 text')]")).shouldBe(Condition.visible);
+element(Selectors.byXpath("//h2[contains(., 'Some visible text in an h2 text')]"))
+.shouldBe(Condition.visible);
 ```
 
 ## URL manipulations:
