@@ -45,7 +45,7 @@ webdriver().shouldNotHave(urlStartingWith("ftp://"));
 webdriver().shouldHave(currentFrameUrl(baseUrl + "/login.html"));
 webdriver().shouldHave(currentFrameUrlStartingWith(baseUrl + "/logout.html"));
 ```
-#Clipboard:
+Clipboard:
 ```
 Clipboard clipboard = Selenide.clipboard();
 String foo = clipboard().getText();
