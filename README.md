@@ -24,9 +24,13 @@ How to open a page :
 Selenide.open("https://www.google.kz/");
 ```
 
-How to open a new page :
+How to open a page in a new tab :
 ```
 executeAsyncJavaScript("window.open(\"http://www.amazon.com\");");
+```
+How to open a switch between tabs :
+```
+???
 ```
 
 Click page element :
@@ -38,6 +42,12 @@ Check if page element exists (in this case is visible):
 ```
 element(Selectors.byXpath("//h2[contains(., 'Some visible text in an h2 text')]"))
 .shouldBe(Condition.visible);
+```
+
+Launch specific or headless browser (maven):
+```
+mvn -Dselenide.browser=chrome -Dselenide.headless=true clean test
+mvn -Dselenide.browser=edge -Dselenide.headless=false clean test
 ```
 
 URL manipulations:
