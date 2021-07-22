@@ -20,7 +20,7 @@
 
 ## Some of the most commonly used functions.
 
-How to open a page :
+How to open a page:
 ```
 @Test
 public void someTest() {
@@ -28,7 +28,7 @@ public void someTest() {
 }
 ```
 How to change / set a browser in code?
-In code (before open() method):
+(before open() method):
 ```
 Configuration.browser = "firefox";
 ```
@@ -45,13 +45,14 @@ How to switch between tabs :
 ```
 ???
 ```
-How to make a screenshot?:
+How to make a screenshot?
+```
+// Set the screenshot folder in your code
+Configuration.reportsFolder = "test-result/screenshots"; 
+String pngFileName = screenshot("my_screenshot_file_name");
 ```
 
-```
-
-
-Click page element :
+Click page element (in this case found by Xpath):
 ```
 element(Selectors.byXpath("//*[contains(text(),'Some text on the button')]")).click();
 ```
