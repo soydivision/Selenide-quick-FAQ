@@ -23,12 +23,16 @@ How to open a page :
 ```
 Selenide.open("https://www.google.kz/");
 ```
+How to change a browser in code (before open() method):
+```
+Configuration.browser = "firefox";
+```
 
 How to open a page in a new tab :
 ```
 executeAsyncJavaScript("window.open(\"http://www.amazon.com\");");
 ```
-How to open a switch between tabs :
+How to switch between tabs :
 ```
 ???
 ```
