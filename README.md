@@ -19,18 +19,28 @@
 
 ## Some of the most commonly used functions.
 
-## Click page element :
+How to open a page :
 ```
-element(Selectors.byXpath("//*[contains(text(),'Some button text')]")).click();
+Selenide.open("https://www.google.kz/");
 ```
 
-##
+How to open a new page :
+```
+executeAsyncJavaScript("window.open(\"http://www.amazon.com\");");
+```
+
+Click page element :
+```
+element(Selectors.byXpath("//*[contains(text(),'Some text on the button')]")).click();
+```
+
+Check if page element exists (in this case is visible):
 ```
 element(Selectors.byXpath("//h2[contains(., 'Some visible text in an h2 text')]"))
 .shouldBe(Condition.visible);
 ```
 
-## URL manipulations:
+URL manipulations:
 ```
 Selenide.open("https://www.google.kz/");
 String url1 = WebDriverRunner.url();
