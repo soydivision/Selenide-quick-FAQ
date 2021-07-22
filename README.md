@@ -63,9 +63,14 @@ element(Selectors.byXpath("//h2[contains(., 'Some visible text in an h2 text')]"
 .shouldBe(Condition.visible);
 ```
 
-Launch specific or headless browser:
+Launch headless browser using system propetry:
 ```
--Dselenide.headless=false
+-Dselenide.headless=true
+```
+
+Launch headless browser setting an option from code:
+```
+Configuration.headless = true;
 ```
 
 URL manipulations:
