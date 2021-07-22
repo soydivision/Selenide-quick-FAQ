@@ -2,6 +2,7 @@
 - Should one restart a browser for each test? What is the best practice?
 [Here](https://youtu.be/ePvrXUCeAr8?t=2306). Subtitles available.
 
+
 - How does one use Jenkins with Selenide?
 [Here](https://www.youtube.com/playlist?list=PLeeLZATMBcD8ayVX7VpYg-fLYG1dueL4Y). Subtitles available.
 
@@ -21,11 +22,19 @@
 
 How to open a page :
 ```
-Selenide.open("https://www.google.kz/");
+@Test
+public void someTest() {
+    open("https://www.google.kz/");
+}
 ```
-How to change a browser in code (before open() method):
+How to change / set a browser in code?
+In code (before open() method):
 ```
 Configuration.browser = "firefox";
+```
+How to change / set a browser using system property?
+``` 
+-Dselenide.browser=edge
 ```
 
 How to open a page in a new tab :
@@ -36,6 +45,11 @@ How to switch between tabs :
 ```
 ???
 ```
+How to make a screenshot?:
+```
+
+```
+
 
 Click page element :
 ```
@@ -48,10 +62,9 @@ element(Selectors.byXpath("//h2[contains(., 'Some visible text in an h2 text')]"
 .shouldBe(Condition.visible);
 ```
 
-Launch specific or headless browser (maven):
+Launch specific or headless browser:
 ```
-mvn -Dselenide.browser=chrome -Dselenide.headless=true clean test
-mvn -Dselenide.browser=edge -Dselenide.headless=false clean test
+-Dselenide.headless=false
 ```
 
 URL manipulations:
