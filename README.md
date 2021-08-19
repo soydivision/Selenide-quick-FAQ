@@ -1,6 +1,6 @@
 # Selenide quick FAQ. 
 This FAQ does not aim to be exhaustive reference. Rather a quick starter.
-To get concise info please refer to [official] (https://selenide.org/documentation.html) documentation.
+To get concise info please refer to [official](https://selenide.org/documentation.html) documentation.
 
 - Should one restart a browser for each test? What is the best practice?
 [Here](https://youtu.be/ePvrXUCeAr8?t=2306). Subtitles available.
