@@ -1,4 +1,7 @@
-# Selenide quick FAQ.
+# Selenide quick FAQ. 
+This FAQ does not aim to be exhaustive reference. Rather quick start.
+To get concise info please refer to official documentation.
+
 - Should one restart a browser for each test? What is the best practice?
 [Here](https://youtu.be/ePvrXUCeAr8?t=2306). Subtitles available.
 
@@ -72,10 +75,19 @@ Launch headless browser setting an option from code:
 ```
 Configuration.headless = true;
 ```
+Custom timeout (5000 milliseconds)
+```
+Configuration.timeout = 5000;
+```
 
 URL manipulations:
 ```
 Selenide.open("https://www.google.kz/");
+
+webdriver().shouldHave(url("https://auth.google.com"));
+webdriver().shouldHave(url("https://mastercard.ee"), Duration.ofSeconds(42));
+webdriver().shouldNotHave(url("http://yandex.ru");
+
 String url1 = WebDriverRunner.url();
 String url2 = WebDriverRunner.currentFrameUrl();
 ```
@@ -110,4 +122,10 @@ Check session storage:
 sessionStorage().shouldHave(item("cat”));
 sessionStorage().shouldHave(itemWithValue("mouse", "Jerry”));
 Map<String, String> items = sessionStorage.getItems();
+```
+Download element:
+```
+$.download()
+or 
+element.download()
 ```
