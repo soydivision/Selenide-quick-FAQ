@@ -82,12 +82,6 @@ Configuration.timeout = 5000;
 
 URL manipulations:
 ```
-Selenide.open("https://www.google.kz/");
-
-webdriver().shouldHave(url("https://auth.google.com"));
-webdriver().shouldHave(url("https://mastercard.ee"), Duration.ofSeconds(42));
-webdriver().shouldNotHave(url("http://yandex.ru");
-
 String url1 = WebDriverRunner.url();
 String url2 = WebDriverRunner.currentFrameUrl();
 ```
@@ -128,4 +122,10 @@ Download element:
 $.download()
 or 
 element.download()
+```
+Check if element ($) contains certains text, exists or visible:
+```
+element(Selectors.byCssSelector("#collection")).shouldNotHave(Condition.text(" Some Text Here "));
+element(Selectors.byCssSelector("#collection")).shouldNotHave(Condition.exist);
+element(Selectors.byCssSelector("#collection")).shouldNotHave(Condition.visible);
 ```
