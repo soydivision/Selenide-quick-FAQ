@@ -137,3 +137,8 @@ element(Selectors.byCssSelector("#collection")).shouldNotHave(Condition.text(" S
 element(Selectors.byCssSelector("#collection")).shouldNotHave(Condition.exist);
 element(Selectors.byCssSelector("#collection")).shouldNotHave(Condition.visible);
 ```
+How to input value and press enter:
+```
+element(Selectors.byCssSelector("input[name='searchTerm']")).setValue("Ford mustang 2020").pressEnter();
+```
+
