@@ -30,6 +30,14 @@ public void someTest() {
     open("https://www.google.kz/");
 }
 ```
+How to find an element:
+```
+$(Selectors.byXpath("//nav/ul/li/a[contains(@href,'new-hardware')]"));
+```
+or 
+```
+element(Selectors.byCssSelector("#bc-sf-filter-products article:nth-child(1)"));
+```
 How to change / set a browser in code?
 (before open() method):
 ```
