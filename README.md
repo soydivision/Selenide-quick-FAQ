@@ -141,4 +141,24 @@ How to input value and press enter:
 ```
 element(Selectors.byCssSelector("input[name='searchTerm']")).setValue("Ford mustang 2020").pressEnter();
 ```
+How to check page title:
+```
+element("title").shouldHave(attribute("text", "Your page title"));
+or
+$("title").shouldHave(attribute("text", "Your page title"));
+```
+How to scroll down:
+```
+executeJavaScript("window.scrollTo(0,document.body.scrollHeight);
+```
+How to scroll down dynamically loading page (my method, use at your own risk):
+```
+public static void scrollUntilElementIsVisible(SelenideElement element) {
+        while (!element.exists()) {
+            executeJavaScript("window.scrollTo(0,document.body.scrollHeight);");
+            sleep(1000);
+        }
+    }
+```
+
 
