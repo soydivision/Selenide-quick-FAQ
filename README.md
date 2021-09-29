@@ -54,7 +54,11 @@ executeAsyncJavaScript("window.open(\"http://www.amazon.com\");");
 ```
 How to switch between tabs :
 ```
-???
+Selenide.open("https://bing.com/");
+executeJavaScript("window.open('about:blank','_blank')");
+Selenide.switchTo().window(1); 
+open("https://google.kz/"); //  opening an url on a newly created tab
+Selenide.switchTo().window(0); // going back to first window
 ```
 How to make a screenshot?
 ```
