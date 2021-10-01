@@ -42,6 +42,10 @@ How to start window maximized?
 ```
 Configuration.startMaximized = true;
 ```
+How to start window with custom size?
+```
+Configuration.browserSize = "2100x1080";
+```
 How to change / set a browser in code?
 (before open() method):
 ```
