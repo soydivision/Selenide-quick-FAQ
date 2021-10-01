@@ -38,6 +38,10 @@ or
 ```
 element(Selectors.byCssSelector("#bc-sf-filter-products article:nth-child(1)"));
 ```
+How to start window maximized?
+```
+Configuration.startMaximized = true;
+```
 How to change / set a browser in code?
 (before open() method):
 ```
@@ -157,12 +161,14 @@ executeJavaScript("window.scrollTo(0,document.body.scrollHeight);
 ```
 How to scroll down dynamically loading page (my method, use at your own risk):
 ```
-public static void scrollUntilElementIsVisible(SelenideElement element) {
+public static void scrollUntilElementExists(SelenideElement element) {
         while (!element.exists()) {
             executeJavaScript("window.scrollTo(0,document.body.scrollHeight);");
             sleep(1000);
         }
     }
 ```
+
+
 
 
