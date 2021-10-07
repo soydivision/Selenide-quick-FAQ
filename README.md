@@ -38,17 +38,18 @@ or
 ```
 element(Selectors.byCssSelector("#bc-sf-filter-products article:nth-child(1)"));
 ```
-How to start window maximized?
+How to start window maximized ?
 ```
-Configuration.startMaximized = true;
+Configuration.startMaximized = true; // in code
+Dselenide.startMaximized = true; //system property
 ```
 How to start window with custom size?
 ```
 Configuration.browserSize = "2100x1080";
 ```
 How to change / set a browser in code?
-(before open() method):
 ```
+//(before open() method)
 Configuration.browser = "firefox";
 ```
 How to change / set a browser using system property?
