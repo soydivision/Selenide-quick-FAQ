@@ -168,8 +168,7 @@ How to scroll down dynamically loading page (my method, use at your own risk):
 ```
 public static void scrollUntilElementExists(SelenideElement element) {
         while (!element.exists()) {
-            executeJavaScript("window.scrollTo(0,document.body.scrollHeight);");
-            sleep(1000);
+            executeJavaScript("window.scrollTo(0,document.body.scrollHeight);");           
         }
     }
 ```
