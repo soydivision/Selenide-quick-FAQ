@@ -174,9 +174,10 @@ public static void scrollUntilElementExists(SelenideElement element) {
 ```
 How to scroll:
 ```
-element("#my-button").scrollIntoView(true);  // the top of the element will be aligned to the top
-element(Selectors.byLinkText("Edit Interests")).scrollIntoView(false); // the bottom of the element will be aligned to the bottom
-
+// the top of the element will be aligned to the top:
+element("#my-button").scrollIntoView(true); 
+// the bottom of the element will be aligned to the bottom: 
+element(Selectors.byLinkText("Edit Interests")).scrollIntoView(false);
 ```
 Custom timeout wait for a certain condition (for an element to exist in this example):
 ```
