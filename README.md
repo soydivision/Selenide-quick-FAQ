@@ -181,7 +181,8 @@ element(Selectors.byLinkText("Edit Interests")).scrollIntoView(false);
 ```
 Custom timeout wait for a certain condition (for an element to exist in this example):
 ```
-element(Selectors.byXpath("//*[text()=//*[@id='delete']")).shouldHave(Condition.exist, Duration.ofSeconds(5000));
+element(Selectors.byXpath("//*[text()=//*[@id='delete']"))
+.shouldHave(Condition.exist, Duration.ofSeconds(5000));
 ```
 
 
