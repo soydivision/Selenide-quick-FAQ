@@ -172,6 +172,12 @@ public static void scrollUntilElementExists(SelenideElement element) {
         }
     }
 ```
+How to scroll:
+```
+element("#my-button").scrollIntoView(true);  // the top of the element will be aligned to the top
+element(Selectors.byLinkText("Edit Interests")).scrollIntoView(false); // the bottom of the element will be aligned to the bottom
+
+```
 Custom timeout wait for a certain condition (for an element to exist in this example):
 ```
 element(Selectors.byXpath("//*[text()=//*[@id='delete']")).shouldHave(Condition.exist, Duration.ofSeconds(5000));
