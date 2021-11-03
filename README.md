@@ -1,7 +1,7 @@
 # Selenide quick FAQ. 
 This FAQ does not aim to be exhaustive reference. Rather a quick starter.
 To get concise info please refer to [official](https://selenide.org/documentation.html) documentation.
-In order to execute given examples, valid libraries and dependencies are to be imported.
+In order to execute given examples, valid libraries and dependencies _are to be imported_.
 
 - Should one restart a browser for each test? What is the best practice?
 [Here](https://youtu.be/ePvrXUCeAr8?t=2306). Subtitles available.
