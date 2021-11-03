@@ -184,6 +184,24 @@ Custom timeout wait for a certain condition (for an element to exist in this exa
 element(Selectors.byXpath("//*[text()=//*[@id='delete']"))
 .shouldHave(Condition.exist, Duration.ofSeconds(5000));
 ```
+element.click() does not work, what should I do? Try using actions() following code:
+```
+SelenideElement element = $(<some selector>);
+actions().moveToElement(element).click(element).perform();
+```
+How to drag-and-drop using selenide? You can use something [like](https://github.com/Yastreba/cucumber/blob/4de8045596107f72aacb8623e09c028be1cc4065/src/main/java/pages/DragAndDropPage.java):
+```
+private SelenideElement bank = $x("//*[@id='credit2']/a");
+private SelenideElement debitSideAccountSell = $x("//*[@id='bank']/li");
+//...
+public void bankToDebitAccount() 
+{
+   (bank).dragAndDropTo(debitSideAccountSell);
+}
+
+```
+
+
 
 
 
