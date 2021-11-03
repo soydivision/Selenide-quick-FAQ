@@ -200,6 +200,12 @@ public void bankToDebitAccount()
 }
 
 ```
+Or:
+```
+SelenideElement element = <Some selector>;
+actions().dragAndDropBy(element, xOffset, yOffset).perform();
+```
+
 
 
 
