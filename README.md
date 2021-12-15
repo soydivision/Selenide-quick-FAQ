@@ -190,6 +190,11 @@ element.click() does not work, what should I do? Try using actions() following c
 SelenideElement element = $(<some selector>);
 actions().moveToElement(element).click(element).perform();
 ```
+Click using JS:
+```
+element(Selectors.byAttribute("id", "name")).click(ClickOptions.usingJavaScript());
+```
+
 How to drag-and-drop using selenide? You can use something [like](https://github.com/Yastreba/cucumber/blob/4de8045596107f72aacb8623e09c028be1cc4065/src/main/java/pages/DragAndDropPage.java):
 ```
 private SelenideElement bank = $x("//*[@id='credit2']/a");
