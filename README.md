@@ -211,6 +211,13 @@ Or:
 SelenideElement element = <Some selector>;
 actions().dragAndDropBy(element, xOffset, yOffset).perform();
 ```
+Check element:
+```
+SelenideElement title = element(Selectors.byAttribute("id", "title"));
+SomePage.Title.shouldHave(Condition.exist);
+SomePage.Title.shouldHave(Condition.visible);
+SomePage.Title.shouldHave(Condition.enabled);
+```
 
 
 
