@@ -1,7 +1,7 @@
 # Selenide quick FAQ. 
 This FAQ does not aim to be exhaustive reference. Rather a quick starter.
 To get concise info please refer to [official](https://selenide.org/documentation.html) documentation.
-In order to execute given examples, valid libraries and dependencies _are to be imported_.
+In order to execute given examples, valid libraries and dependencies _are to be imported_. Henceforth TestNG annotations are used as testing library.
 
 - Should one restart a browser for each test? What is the best practice?
 [Here](https://youtu.be/ePvrXUCeAr8?t=2306). Subtitles available.
@@ -218,6 +218,15 @@ SomePage.Title.shouldHave(Condition.exist);
 SomePage.Title.shouldHave(Condition.visible);
 SomePage.Title.shouldHave(Condition.enabled);
 ```
+How to start a new browser for each test?
+```
+@AfterClass(alwaysRun = true)
+{
+ WebDriverRunner.closeWebDriver();
+}
+
+```
+
 
 
 
