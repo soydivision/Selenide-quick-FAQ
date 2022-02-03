@@ -33,7 +33,7 @@ public void someTest() {
 ```
 How to find an element:
 ```
-$(Selectors.byXpath("//nav/ul/li/a[contains(@href,'new-hardware')]"));
+$(Selectors.byXpath("//button[contains(@class,'submit-btn')]"));
 ```
 or 
 ```
