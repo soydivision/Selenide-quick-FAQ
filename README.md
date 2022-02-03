@@ -39,6 +39,12 @@ or
 ```
 element(Selectors.byCssSelector("#bc-sf-filter-products article:nth-child(1)"));
 ```
+How to find element using __$__?
+```
+$("intro") for CSS.  
+$x("//*[contains(@routerlink,'nsi')]") - for xpath. 
+```
+
 How to start window maximized ?
 ```
 Configuration.startMaximized = true; // in code
