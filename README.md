@@ -169,7 +169,7 @@ $("title").shouldHave(attribute("text", "Your page title"));
 ```
 How to scroll down:
 ```
-executeJavaScript("window.scrollTo(0,document.body.scrollHeight);
+executeJavaScript("window.scrollTo(0,document.body.scrollHeight)")
 ```
 How to scroll down dynamically loading page (my method, use at your own risk):
 ```
@@ -232,6 +232,18 @@ How to start a new browser for each test?
 }
 
 ```
+How to stop execution, wait, sleep?  
+Commentary:as of 6.0.1 sleep() method "is guaranteed to wait at least given number of milliseconds", because it doesn't use standard Java implementation which can "wake up earlier".  
+See docs or source code for detailed information. 
+```
+Selenide.sleep(n);
+// n ~ milliseconds
+```
+Keep the browser opened after test execution:  
+```
+-Dselenide.holdBrowserOpen=true
+```
+
 
 
 
