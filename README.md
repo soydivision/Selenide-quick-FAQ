@@ -48,8 +48,8 @@ How to find element using __$__?
 $("intro") for CSS.  
 $x("//*[contains(@routerlink,'nsi')]") - for xpath. 
 ```
-
-How to start window maximized ?
+**Deprecated**
+How to start window maximized?
 ```
 Configuration.startMaximized = true; // in code
 Dselenide.startMaximized = true; //system property
@@ -228,7 +228,7 @@ SomePage.Title.shouldHave(Condition.exist);
 SomePage.Title.shouldHave(Condition.visible);
 SomePage.Title.shouldHave(Condition.enabled);
 ```
-How to start a new browser for each test?
+How to start a new browser for each test? TestNG scenario:
 ```
 @AfterClass(alwaysRun = true)
 {
@@ -247,8 +247,10 @@ Keep the browser opened after test execution:
 ```
 -Dselenide.holdBrowserOpen=true
 ```
-
-
+Press key:
+```
+Selenide.actions().sendKeys(Keys.HOME).perform();
+```
 
 
 
