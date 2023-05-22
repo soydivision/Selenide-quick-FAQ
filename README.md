@@ -251,6 +251,11 @@ Press key:
 ```
 Selenide.actions().sendKeys(Keys.HOME).perform();
 ```
+Switch to another tab:
+```
+Selenide.switchTo().window(1);
+```
+
 
 
 
