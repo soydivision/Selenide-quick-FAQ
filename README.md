@@ -155,6 +155,10 @@ $.download()
 or 
 element.download()
 ```
+Upload file:
+```
+element(Selectors.byAttribute("id", "DOCUMENT_SCAN_PDF")).uploadFile(new File("C:\\Users\\PC\\Desktop\\PDF\\doc.pdf"));
+```
 Check if element ($) contains certains text, exists or visible:
 ```
 element(Selectors.byCssSelector("#collection")).shouldNotHave(Condition.text(" Some Text Here "));
