@@ -97,7 +97,10 @@ Check if page element exists (in this case is visible):
 element(Selectors.byXpath("//h2[contains(., 'Some visible text in an h2 text')]"))
 .shouldBe(Condition.visible);
 ```
-
+Get all elements who satisfy certain condition (in the example all elemnts have attribute id=result):
+```
+ElementsCollection result = elements(byAttribute("id", "result"));
+```
 Launch headless browser using system propetry:
 ```
 -Dselenide.headless=true
