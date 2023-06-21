@@ -253,7 +253,9 @@ Selenide.sleep(n);
 ```
 Keep the browser opened after test execution:  
 ```
--Dselenide.holdBrowserOpen=true
+-Dselenide.holdBrowserOpen=true // in CLI
+or
+Configuration.holdBrowserOpen=true // in code
 ```
 Press key:
 ```
