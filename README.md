@@ -67,8 +67,13 @@ How to change / set a browser using system property?
 ``` 
 -Dselenide.browser=edge
 ```
-
-How to open a page in a new tab :
+How to open a page in a new tab:
+```
+open(“https://example.com/”);
+switchTo().window(1); // switching to new tab
+switchTo().window(0); // returning to first tab
+```
+How to open a page in a new tab (using JS) :
 ```
 executeAsyncJavaScript("window.open(\"http://www.amazon.com\");");
 ```
