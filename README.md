@@ -270,12 +270,3 @@ Switch to another tab:
 ```
 Selenide.switchTo().window(1);
 ```
-
-
-test
-
-
-
-
-
-
