@@ -12,7 +12,7 @@ In order to execute given examples, valid libraries and dependencies _are to be 
 
 - How to clean browser cache and storage without restarting it?
 ```
-@BeforeEach void resetBrowser() {
+@BeforeEach void resetBrowser() {  
   open("about:blank");
   open("");
   Selenide.clearBrowserCookies();
