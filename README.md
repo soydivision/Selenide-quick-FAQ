@@ -270,3 +270,48 @@ Switch to another tab:
 ```
 Selenide.switchTo().window(1);
 ```
+Actual value at the moment
+```
+webdriver().shouldHave(url("https://some.com/page.html"));
+localStorage().shouldHave(item("mouse", "Jerry”));
+sessionStorage().shouldHave(itemWithValue("mouse", "Jerry”));
+clipboard().shouldHave(content("Remember me"));
+```
+New method $.highlight() for highlighting a web element
+```
+import static com.codeborne.selenide.HighlightOptions.*;
+
+$("h1").highlight();              // by default - background()
+$("h1").highlight(background());  // colored background
+$("h1").highlight(border());      // colored border  
+
+$("h1").highlight(background("rgb(85, 180, 250);"));
+$("h1").highlight(border("3px solid blue"));
+
+$("h1").highlight(style("color: white; background-color: red;"));
+```
+As of 6.19.0 Selenide will clean up the invisible space in elements like: 
+ ``` 
+<div id="status">
+  <span> Fighting spirit </span>
+  <span>  seething&nbsp;\u200Breality  </span>
+</div> 
+```
+Methods $.tap(), $.doubleTap() for mobile apps:
+```
+import static com.codeborne.selenide.appium.SelenideAppium.$;
+
+$(By.name("ComputeSumButton")).tap();
+$(AppiumBy.xpath("//android.widget.Button")).doubleTap();
+$(AppiumBy.xpath(".//*[@text='People Names']")).tap(longPressFor(ofSeconds(4)));
+```
+Selector by class+index for mobile apps:
+```
+import static com.codeborne.selenide.appium.AppiumSelectors.byClassNameAndIndex;
+import static com.codeborne.selenide.appium.SelenideAppium.$;
+
+$(byClassNameAndIndex("android.widget.TextView", 7)).tap();
+```
+
+
+ 
